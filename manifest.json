@@ -1,6 +1,6 @@
 {
 	"name": "VKTex",
-	"version": "1.1",
+	"version": "0.1",
 	"description": "Use Tex everywhere",
 	"manifest_version": 2,
 	"icons": {
@@ -10,7 +10,12 @@
 	},
 	"browser_action": {
 		"default_icon": "images/icon-16.png",
-		"default_title": "VK Tex"
+		"default_title": "VK Tex",
+		"default_popup": "html/popup.html"
+	},
+	"background": {
+		"scripts": ["js/background.js"],
+		"persistent": false
 	},
 	"permissions": [
 		"https://vk.com/*"
@@ -18,9 +23,7 @@
 	"content_scripts": [
 	{
 		"matches": ["https://vk.com/*"],
-		"js": ["js/jQuery.min.js",
-			"js/katex.min.js",
-			"js/main.js"],
+		"js": ["js/injector.js"],
 		"run_at": "document_idle"
 	} ]
 }
