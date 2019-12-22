@@ -25,5 +25,14 @@
 		"matches": ["https://vk.com/*"],
 		"js": ["js/injector.js"],
 		"run_at": "document_idle"
-	} ]
+	} ],
+	"web_accessible_resources": [
+		"js/html2canvas.js",
+		"js/jQuery.min.js",
+		"js/katex.min.js",
+		"js/main.js",
+		"css/main.css",
+		"css/katex.min.css",
+		"css/fonts/*"
+	]
 }
